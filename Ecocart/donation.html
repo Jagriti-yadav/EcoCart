@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoCart | Support Our Mission</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="donation-hero mt-5 pt-5">
+    <div class="container text-center position-relative">
+      <i class="bi bi-heart-fill display-1 text-white mb-4" style="animation: pulse 2s infinite;"></i>
+      <h1 class="display-3 fw-bold text-white mb-3">Support Our Green Mission</h1>
+      <p class="lead text-white mb-4">Every contribution helps us create a more sustainable future for our planet</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item active text-white" aria-current="page">Donation</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row g-4 text-center">
+      <div class="col-md-3">
+        <div class="stat-box">
+          <i class="bi bi-tree-fill display-4 text-success mb-3"></i>
+          <div class="animate-number" data-target="5420">0</div>
+          <p class="text-muted mb-0">Trees Planted</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-box">
+          <i class="bi bi-people-fill display-4 text-primary mb-3"></i>
+          <div class="animate-number" data-target="1250">0</div>
+          <p class="text-muted mb-0">Active Donors</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-box">
+          <i class="bi bi-cash-coin display-4 text-warning mb-3"></i>
+          <div class="animate-number" data-target="₹845000">0</div>
+          <p class="text-muted mb-0">Funds Raised</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-box">
+          <i class="bi bi-globe-americas display-4 text-info mb-3"></i>
+          <div class="animate-number" data-target="15">0</div>
+          <p class="text-muted mb-0">Active Projects</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-lg p-4">
+            <h2 class="fw-bold mb-4">
+              <i class="bi bi-gift-fill text-primary me-2"></i>Make a Donation
+            </h2>
+
+            <div class="mb-4">
+              <label class="form-label fw-semibold mb-3">Donation Frequency</label>
+              <div class="donation-frequency">
+                <button class="frequency-btn active" data-frequency="one-time">
+                  <i class="bi bi-calendar-check me-2"></i>One-Time
+                </button>
+                <button class="frequency-btn" data-frequency="monthly">
+                  <i class="bi bi-arrow-repeat me-2"></i>Monthly
+                </button>
+                <button class="frequency-btn" data-frequency="yearly">
+                  <i class="bi bi-calendar-range me-2"></i>Yearly
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-semibold mb-3">Select Amount</label>
+              <div class="row g-3">
+                <div class="col-md-4 col-6">
+                  <div class="donation-card card border-0 shadow-sm p-3 text-center" data-amount="500">
+                    <h3 class="fw-bold text-primary mb-1">₹500</h3>
+                    <small class="text-muted">Plant 5 Trees</small>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="donation-card card border-0 shadow-sm p-3 text-center" data-amount="1000">
+                    <h3 class="fw-bold text-primary mb-1">₹1,000</h3>
+                    <small class="text-muted">Plant 10 Trees</small>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="donation-card card border-0 shadow-sm p-3 text-center" data-amount="2500">
+                    <h3 class="fw-bold text-primary mb-1">₹2,500</h3>
+                    <small class="text-muted">Plant 25 Trees</small>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="donation-card card border-0 shadow-sm p-3 text-center" data-amount="5000">
+                    <h3 class="fw-bold text-primary mb-1">₹5,000</h3>
+                    <small class="text-muted">Support a Project</small>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="donation-card card border-0 shadow-sm p-3 text-center" data-amount="10000">
+                    <h3 class="fw-bold text-primary mb-1">₹10,000</h3>
+                    <small class="text-muted">Become a Patron</small>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="donation-card card border-0 shadow-sm p-3 text-center" data-amount="custom">
+                    <h3 class="fw-bold text-primary mb-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </h3>
+                    <small class="text-muted">Custom Amount</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4" id="custom-amount-section" style="display: none;">
+              <label class="form-label fw-semibold">Enter Custom Amount</label>
+              <div class="input-group input-group-lg">
+                <span class="input-group-text bg-primary text-white border-0">
+                  <i class="bi bi-currency-rupee"></i>
+                </span>
+                <input type="number" class="custom-amount-input form-control" id="custom-amount" placeholder="Enter amount" min="100">
+              </div>
+              <small class="text-muted">Minimum donation: ₹100</small>
+            </div>
+
+            <div class="mb-4">
+              <h5 class="fw-semibold mb-3">Your Information</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="donor-name" placeholder="Full Name *" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" id="donor-email" placeholder="Email Address *" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control" id="donor-phone" placeholder="Phone Number">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="donor-pan" placeholder="PAN Number (for 80G)">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" id="donor-message" rows="3" placeholder="Leave a message (optional)"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h5 class="fw-semibold mb-3">Payment Method</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="payment-method selected" data-method="upi">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-phone-fill display-6 text-primary me-3"></i>
+                      <div>
+                        <h6 class="mb-0 fw-semibold">UPI Payment</h6>
+                        <small class="text-muted">PhonePe, Google Pay, Paytm</small>
+                      </div>
+                      <i class="bi bi-check-circle-fill text-success ms-auto fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="payment-method" data-method="card">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-credit-card-fill display-6 text-primary me-3"></i>
+                      <div>
+                        <h6 class="mb-0 fw-semibold">Card Payment</h6>
+                        <small class="text-muted">Debit/Credit Card</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="payment-method" data-method="netbanking">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-bank display-6 text-primary me-3"></i>
+                      <div>
+                        <h6 class="mb-0 fw-semibold">Net Banking</h6>
+                        <small class="text-muted">All major banks</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="payment-method" data-method="wallet">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-wallet2 display-6 text-primary me-3"></i>
+                      <div>
+                        <h6 class="mb-0 fw-semibold">Wallet</h6>
+                        <small class="text-muted">Paytm, Mobikwik</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="terms-check">
+              <label class="form-check-label" for="terms-check">
+                I agree to the <a href="#" class="text-primary">terms and conditions</a> and consent to receive tax receipts
+              </label>
+            </div>
+
+            <button class="btn btn-primary btn-lg w-100 py-3" id="donate-btn">
+              <i class="bi bi-heart-fill me-2"></i>Complete Donation
+              <i class="bi bi-arrow-right ms-2"></i>
+            </button>
+
+            <div class="text-center mt-3">
+              <small class="text-muted">
+                <i class="bi bi-shield-check me-1"></i>
+                Secure payment powered by Razorpay | 80G Tax Exemption Available
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card border-0 shadow-lg mb-4">
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-3">
+                <i class="bi bi-receipt text-primary me-2"></i>Donation Summary
+              </h5>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Frequency:</span>
+                <span class="fw-semibold" id="summary-frequency">One-Time</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Amount:</span>
+                <span class="fw-semibold text-primary fs-4" id="summary-amount">₹0</span>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between">
+                <span class="fw-semibold">Impact:</span>
+                <span class="fw-semibold text-success" id="summary-impact">-</span>
+              </div>
+            </div>
+          </div>
+          <div class="card border-0 shadow-lg mb-4">
+            <div class="card-body p-4 text-center">
+              <h5 class="fw-bold mb-4">Current Campaign</h5>
+              <div class="progress-circle mx-auto mb-3">
+                <div class="progress-text">75%</div>
+              </div>
+              <h6 class="fw-bold mb-2">Clean Water Initiative</h6>
+              <p class="text-muted small mb-3">₹6,37,500 raised of ₹8,50,000 goal</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
+              </div>
+              <p class="text-muted small mt-3 mb-0">
+                <i class="bi bi-people-fill me-1"></i>856 donors
+              </p>
+            </div>
+          </div>
+
+          <div class="impact-card mb-4">
+            <h5 class="fw-bold mb-3">
+              <i class="bi bi-star-fill text-warning me-2"></i>Your Impact
+            </h5>
+            <div class="mb-3">
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <small>Tax deduction under 80G</small>
+              </div>
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <small>Monthly impact reports</small>
+              </div>
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <small>Certificate of appreciation</small>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <small>Exclusive donor community</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <img src="https://via.placeholder.com/200x60/667eea/ffffff?text=80G+Certified" alt="80G Certified" class="img-fluid mb-2 rounded">
+            <img src="https://via.placeholder.com/200x60/28a745/ffffff?text=Verified+NGO" alt="Verified NGO" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Recent Donors</h2>
+      <div class="row g-4" id="recent-donors">
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/main.js" type="module"></script>
+  <script src="js/donation.js"></script>
+</body>
+</html>

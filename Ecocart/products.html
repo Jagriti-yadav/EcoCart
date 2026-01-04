@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoCart | Products</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar Placeholder - Loaded from navbar.js -->
+  <div id="navbar-placeholder"></div><!-- Enhanced Products Hero Banner -->
+  <div class="products-hero-banner mt-5 pt-5">
+    <div class="container text-center py-5">
+      <div class="products-hero-content animate-fade-in">
+        <i class="bi bi-shop display-1 text-white mb-3 pulse-icon"></i>
+        <h1 class="display-3 fw-bold text-white mb-3">Our Eco-Friendly Collection</h1>
+        <p class="lead text-white mb-4">Sustainable, handcrafted, and made with care for our planet.</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active text-white" aria-current="page">Products</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Stats Banner -->
+  <div class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="stat-card text-center p-4">
+          <i class="bi bi-box-seam display-4 text-primary mb-3"></i>
+          <h3 class="fw-bold mb-2">50+</h3>
+          <p class="text-muted mb-0">Eco-Friendly Products</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card text-center p-4">
+          <i class="bi bi-people display-4 text-success mb-3"></i>
+          <h3 class="fw-bold mb-2">1000+</h3>
+          <p class="text-muted mb-0">Happy Customers</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card text-center p-4">
+          <i class="bi bi-star-fill display-4 text-warning mb-3"></i>
+          <h3 class="fw-bold mb-2">4.8/5</h3>
+          <p class="text-muted mb-0">Average Rating</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Enhanced Bootstrap Filter Section -->
+  <div class="container my-5">
+    <div class="card border-0 shadow-hover p-4 filter-card">
+      <div class="row align-items-center g-4">
+        
+          <!-- Category Filter -->
+        <div class="col-lg-5 col-md-6">
+          <div class="d-flex flex-wrap gap-2">
+            <input type="radio" class="btn-check" name="category" id="all" value="all" checked>
+            <label class="btn btn-outline-primary btn-filter" for="all">
+              <i class="bi bi-grid me-1"></i>All
+            </label>
+            
+            <input type="radio" class="btn-check" name="category" id="decor" value="decor">
+            <label class="btn btn-outline-primary btn-filter" for="decor">
+              <i class="bi bi-house-door me-1"></i>Decor
+            </label>
+            
+            <input type="radio" class="btn-check" name="category" id="accessories" value="accessories">
+            <label class="btn btn-outline-primary btn-filter" for="accessories">
+              <i class="bi bi-bag me-1"></i>Accessories
+            </label>
+            
+            <input type="radio" class="btn-check" name="category" id="gifts" value="gifts">
+            <label class="btn btn-outline-primary btn-filter" for="gifts">
+              <i class="bi bi-gift me-1"></i>Gifts
+            </label>
+          </div>
+        </div>
+        
+        <!-- Sort Dropdown -->
+        
+      </div>
+      
+      <!-- Active Filters Display -->
+      <div class="active-filters mt-3" id="active-filters" style="display: none;"> 
+        <div class="d-flex align-items-center flex-wrap gap-2">
+          <small class="text-muted">Active Filters:</small>
+          <span class="badge bg-primary filter-badge">
+            Category <i class="bi bi-x ms-1"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Enhanced Products Grid Section -->
+  <section class="py-4 products-grid-section">
+    <div class="container">
+      <!-- Results Count -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h5 class="mb-0 text-muted">
+          <i class="bi bi-filter-circle me-2"></i>
+          Showing <span class="text-primary fw-bold" id="product-count">12</span> products
+        </h5>
+        <div class="view-toggle">
+          <button class="btn btn-sm btn-outline-secondary active" id="grid-view">
+            <i class="bi bi-grid-3x3-gap"></i>
+          </button>
+          <button class="btn btn-sm btn-outline-secondary" id="list-view">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="row g-4" id="products-grid">
+        <!-- Products will be loaded dynamically from the server -->
+      </div>      <!-- Enhanced Pagination -->
+      <nav aria-label="Product pagination" class="mt-5">
+        <ul class="pagination justify-content-center pagination-modern">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+              <i class="bi bi-chevron-left"></i>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  
+
+  <div id="footer-placeholder"></div>
+
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/main.js" type="module"></script>
+  <script src="js/products.js"></script>
+  
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+</body>
+</html>

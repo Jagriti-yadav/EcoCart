@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Index</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: #f5f7fb;
+            color: #1f2937;
+            scroll-behavior: smooth;
+        }
+        /* ===== HERO SECTION ===== */
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e3a8a, #2563eb, #9333ea);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            animation: fadeIn 1.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px)
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+        
+        .hero img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0)
+            }
+            50% {
+                transform: translateY(-12px)
+            }
+            100% {
+                transform: translateY(0)
+            }
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #fff;
+            color: #1e3a8a;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #e0e7ff;
+            transform: translateY(-3px);
+        }
+        /* ===== NAV ===== */
+        
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111827;
+            text-align: center;
+            padding: 12px;
+        }
+        
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #93c5fd;
+        }
+        /* ===== SECTIONS ===== */
+        
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        
+        section h2 {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 45px;
+            background: linear-gradient(90deg, #2563eb, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .about p {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 1.05rem;
+        }
+        /* ===== CARDS ===== */
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            transition: 0.4s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.18);
+        }
+        
+        .card h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        /* ===== SKILLS ===== */
+        
+        .skills span {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 18px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #2563eb, #9333ea);
+            color: #fff;
+            font-size: 0.95rem;
+        }
+        /* ===== FOOTER ===== */
+        
+        footer {
+            background: #111827;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .education {
+            padding: 80px 10%;
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+        }
+        
+        .education h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .edu-card {
+            background: #fff;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 700px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: fadeUp 1s ease;
+        }
+        
+        .edu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .edu-card h3 {
+            color: #6a11cb;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .edu-card .institute {
+            font-weight: 600;
+            color: #444;
+        }
+        
+        .edu-card .year {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        
+        .edu-card .desc {
+            font-size: 15px;
+            color: #555;
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .contact-section {
+            background: #ffffff;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-title {
+            color: #e1c400;
+            font-size: 28px;
+            margin-bottom: 25px;
+            text-decoration: underline;
+            text-decoration-color: #7b2cbf;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #0077b6;
+        }
+        
+        .contact-form button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 12px;
+            background: #0077b6;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            background: #005f8f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-content">
+            <img src="riddhi.jpeg" alt=" Profile Photo ">
+            <h1>Riddhi Aggarwal</h1>
+            <p>Student | Aspiring Developer</p>
+            <a href="#about " class="btn ">Explore Portfolio</a>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#about ">About</a>
+        <a href="#skills ">Skills</a>
+        <a href="#projects ">Projects</a>
+        <a href="#contact ">Contact</a>
+    </nav>
+
+    <!-- ABOUT -->
+    <section id="about " class="about ">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate student who enjoys building creative and practical projects. I love learning new technologies and improving my problem‑solving skills.
+        </p>
+    </section>
+
+    <section id="education " class="education ">
+        <h2>Education</h2>
+
+        <div class="edu-card ">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p class="institute ">Institute of Management and Reasearch</p>
+            <p class="year ">2022 – 2025</p>
+            <p class="desc ">
+            </p>
+        </div>
+        <div class="edu-card ">
+
+            <h3>Masters of Computer Applications (MCA)</h3>
+            <p class="institute ">KIET Group Of Institutions</p>
+            <p class="year ">2025 – 2027</p>
+            <p class="desc ">
+                Studying core subjects like Programming, Data Structures, Operating Systems, DBMS and Web Development.
+            </p>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills ">
+        <h2>Skills</h2>
+        <div style="text-align:center " class="skills ">
+            <span>C</span>
+            <span>Java</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects ">
+        <h2>Projects</h2>
+        <div class="grid ">
+
+            <div class="card ">
+                <h3>Task Tracker</h3>
+                <p>Student task management system designed with Design Thinking.</p>
+            </div>
+            <div class="card ">
+                <h3>Portfolio Website</h3>
+                <p>Responsive and animated portfolio using HTML & CSS.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section " id="contact ">
+        <h2 class="contact-title ">Contact Me</h2>
+
+        <form class="contact-form ">
+            <label>Your Name:</label>
+            <input type="text " placeholder="Enter your name " required>
+
+            <label>Your Email:</label>
+            <input type="email " placeholder="Enter your email " required>
+
+            <label>Message:</label>
+            <textarea rows="5 " placeholder="Write your message here... " required></textarea>
+
+            <button type="submit ">Send Message</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <p style="text-align:center ">
+            Email: riddhiaggarwal005@email.com<br> GitHub: github.com/username<br> LinkedIn: linkedin.com/in/username
+        </p>
+        </section>
+
+        <p>© 2026 Riddhi | Portfolio Website</p>
+    </footer>
+
+</body>
+
+</html>

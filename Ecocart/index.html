@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoCart | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div id="heroCarousel" class="carousel slide mt-5 hero-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="hero-slide hero-slide-1">
+          <div class="hero-overlay"></div>
+          <div class="container text-center hero-content">
+            <h1 class="display-3 fw-bold text-white mb-3 animate-fade-in">Discover Our Collection</h1>
+            <p class="lead text-white mb-4 animate-fade-in-delay">Eco-friendly, handcrafted, and made with love.</p>
+            <a href="products.html" class="btn btn-hero btn-lg px-5 py-3 animate-fade-in-delay-2">
+              <i class="bi bi-shop me-2"></i>Shop Now
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="hero-slide hero-slide-2">
+          <div class="hero-overlay"></div>
+          <div class="container text-center hero-content">
+            <h1 class="display-3 fw-bold text-white mb-3 animate-fade-in">Sustainable Living</h1>
+            <p class="lead text-white mb-4 animate-fade-in-delay">Choose products that care for our planet.</p>
+            <a href="products.html" class="btn btn-hero btn-lg px-5 py-3 animate-fade-in-delay-2">
+              <i class="bi bi-tree me-2"></i>Explore Green
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="hero-slide hero-slide-3">
+          <div class="hero-overlay"></div>
+          <div class="container text-center hero-content">
+            <h1 class="display-3 fw-bold text-white mb-3 animate-fade-in">Handcrafted Quality</h1>
+            <p class="lead text-white mb-4 animate-fade-in-delay">Each item tells a story of craftsmanship.</p>
+            <a href="products.html" class="btn btn-hero btn-lg px-5 py-3 animate-fade-in-delay-2">
+              <i class="bi bi-hand-thumbs-up me-2"></i>Discover More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="container my-5">
+    <div class="alert alert-gradient alert-dismissible fade show shadow-sm" role="alert">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-gift fs-3 me-3 pulse-icon"></i>
+        <div>
+          <strong class="fs-5">Special Offer!</strong>
+          <p class="mb-0">Get <span class="highlight-text">20% off</span> on your first order. Use code <code class="promo-code">ECO20</code></p>
+        </div>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+  <section class="py-5 bg-light categories-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3 section-title">Shop by Category</h2>
+        <p class="text-muted lead">Explore our carefully curated collections</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-hover h-100 category-card-modern">
+            <div class="card-body text-center p-5 position-relative overflow-hidden">
+              <div class="category-icon-wrapper mb-4">
+                <i class="bi bi-house-door display-1 text-primary"></i>
+              </div>
+              <h4 class="card-title fw-bold mb-3">Home Decor</h4>
+              <p class="card-text text-muted mb-4">Beautiful decorative items for your home</p>
+              <a href="products.html" class="btn btn-outline-primary btn-modern">
+                <span>Browse Collection</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+              <div class="category-bg-icon">
+                <i class="bi bi-house-door"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-hover h-100 category-card-modern">
+            <div class="card-body text-center p-5 position-relative overflow-hidden">
+              <div class="category-icon-wrapper mb-4">
+                <i class="bi bi-bag display-1 text-success"></i>
+              </div>
+              <h4 class="card-title fw-bold mb-3">Accessories</h4>
+              <p class="card-text text-muted mb-4">Sustainable accessories for daily use</p>
+              <a href="products.html" class="btn btn-outline-success btn-modern">
+                <span>Browse Collection</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+              <div class="category-bg-icon">
+                <i class="bi bi-bag"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-hover h-100 category-card-modern">
+            <div class="card-body text-center p-5 position-relative overflow-hidden">
+              <div class="category-icon-wrapper mb-4">
+                <i class="bi bi-gift display-1 text-warning"></i>
+              </div>
+              <h4 class="card-title fw-bold mb-3">Gifts</h4>
+              <p class="card-text text-muted mb-4">Perfect eco-friendly gifts for loved ones</p>
+              <a href="products.html" class="btn btn-outline-warning btn-modern">
+                <span>Browse Collection</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+              <div class="category-bg-icon">
+                <i class="bi bi-gift"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 bestsellers-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3 section-title">Best Sellers</h2>
+        <p class="text-muted lead">Discover our most loved products</p>
+      </div>
+      <div class="row g-4" id="featured-products-grid">
+
+        <div class="col-12 text-center">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>  
+  </section>
+
+  <section class="py-5 bg-light features-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3 section-title">Why Choose EcoCart?</h2>
+        <p class="text-muted lead">Committed to quality, sustainability, and your satisfaction</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-card text-center p-4">
+            <div class="feature-icon-wrapper mb-3">
+              <i class="bi bi-truck fs-1 text-primary"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Free Shipping</h5>
+            <p class="text-muted mb-0">On orders over ₹999</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-card text-center p-4">
+            <div class="feature-icon-wrapper mb-3">
+              <i class="bi bi-shield-check fs-1 text-success"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Secure Payment</h5>
+            <p class="text-muted mb-0">100% secure transactions</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-card text-center p-4">
+            <div class="feature-icon-wrapper mb-3">
+              <i class="bi bi-arrow-repeat fs-1 text-info"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Easy Returns</h5>
+            <p class="text-muted mb-0">30-day return policy</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-card text-center p-4">
+            <div class="feature-icon-wrapper mb-3">
+              <i class="bi bi-headset fs-1 text-warning"></i>
+            </div>
+            <h5 class="fw-bold mb-2">24/7 Support</h5>
+            <p class="text-muted mb-0">Always here to help</p>
+          </div>
+        </div>
+      </div>    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+
+  <script src="js/main.js" type="module"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

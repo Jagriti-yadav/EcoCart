@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jagriti Yadav Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        section,
+        footer {
+            box-shadow: 0 2px 5px rgba(113, 4, 210, 0.1);
+            border-radius: 12px;
+            margin: 15px;
+        }
+
+        body {
+            background-color: white;
+            color: black;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #7548fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #9271f5;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(12, 7, 16, 0.1);
+            border-radius: 12px;
+            margin: 15px;
+        }
+
+        nav .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* Hide checkbox */
+        #menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 200px;
+                background: #9271f5;
+                flex-direction: column;
+                padding: 20px 0;
+                text-align: center;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                border-radius: 12px;
+            }
+
+            /* When checkbox is checked, show menu */
+            #menu-toggle:checked+.menu-icon+.nav-menu {
+                transform: translateX(0);
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            font-weight: 500;
+            font-size: 16px;
+            padding: 5px 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #7757e3;
+            color: white;
+            border-radius: 12px;
+        }
+
+        .about-me {
+            background-color: white;
+            padding: 10px 10px;
+            text-align: center;
+        }
+
+        .about-me h1 {
+            font-size: 36px;
+            color: #8e6bf8;
+        }
+
+        .about-me p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        img {
+            height: 200px;
+            border-radius: 40%;
+        }
+
+        .education {
+            background-color: #9271f5;
+            padding: 10px 10px;
+        }
+
+        .education h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: black;
+        }
+
+        .education h3 {
+            color: white;
+        }
+
+        .edu-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .edu-item {
+            margin-bottom: 30px;
+        }
+
+        .edu-item h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .edu-item p {
+            font-size: 16px;
+        }
+
+        .projects {
+            padding: 10px 10px;
+            background-color: white;
+        }
+
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: black;
+        }
+
+        .project-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background-color: #9271f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+            color: black;
+        }
+
+        .project-card p {
+            font-size: 15px;
+        }
+
+        .project-card a.btn-view {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .contact {
+            background-color: #9271f5;
+            padding: 10px 10px;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: black;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: fit-content;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: black;
+        }
+
+        @media (max-width: 600px) {
+            .about-me h1 {
+                font-size: 28px;
+            }
+
+            .edu-item h3 {
+                font-size: 20px;
+            }
+
+            .project-card h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container container">
+            <div class="logo"><a href="#">Jagriti Yadav</a></div>
+            <!-- Hidden checkbox for toggle -->
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <ul class="nav-menu">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-me">
+        <div class="container">
+            <img src="jagriti.jpeg">
+            <h1>About Me</h1>
+            <p>
+                Hi! I'm Jagriti Yadav,<br>a passionate front-end web developer and MCA student. I love creating
+                clean, responsive, and user-friendly web experiences. I believe in continuous learning, hard work,
+                and building useful projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Education</h2>
+            <ul class="edu-list">
+                <li class="edu-item">
+                    <h3>MCA - KIET GROUP OF INSTITUTIONS</h3>
+                    <p>Expected Graduation: 2027. Learning advanced concepts in software development, web technologies,
+                        and database management.</p>
+                </li>
+                <li class="edu-item">
+                    <h3>BCA - HEC GROUP OF INSTITUTIONS</h3>
+                    <p>Completed in 2023. Gained strong fundamentals in programming, database management, and web
+                        development.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-cards">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>
+                        A fully responsive portfolio website built using HTML and CSS, featuring sections like About,
+                        Projects, Skills, Contact, and a modern UI with pastel color themes.
+                    </p>
+                    <a href="#" class="btn-view" target="_blank">View Project</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>To-Do List</h3>
+                    <p>
+                        A simple and interactive To-Do application built using HTML, CSS, and JavaScript.
+                        It allows users to add, delete, and manage daily tasks easily using localStorage.
+                    </p>
+                    <a href="To-do-List.html" class="btn-view" target="_blank">View Project</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>E-Commerce Product Page</h3>
+                    <p>
+                        A clean and responsive product page layout designed using Flexbox and CSS Grid.
+                        Includes product images, description, pricing section, and add-to-cart UI.
+                    </p>
+                    <a href="../index.html" class="btn-view" target="_blank">View Project</a>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form class="contact-form" method="post" action="#">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="successMessage"
+                style="color: white; font-weight:600; display:none; text-align:center; margin-top:10px;">
+                Your message has been sent successfully!
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Jagriti Yadav — All Rights Reserved.</p>
+            <p>Frontend Developer | Web Designer</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.querySelector(".contact-form").addEventListener("submit", function (e) {
+            e.preventDefault(); // stop form from refreshing
+
+            const name = document.querySelector("input[name='name']");
+            const email = document.querySelector("input[name='email']");
+            const message = document.querySelector("textarea[name='message']");
+            const successMessage = document.getElementById("successMessage");
+
+            let errors = [];
+
+            const namePattern = /^[A-Za-z\s]+$/;
+            if (!namePattern.test(name.value.trim())) {
+                errors.push("Name must contain only letters and spaces.");
+            } else if (name.value.trim().length < 3) {
+                errors.push("Name must be at least 3 characters.");
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value.trim())) {
+                errors.push("Enter a valid email address.");
+            }
+
+            if (message.value.trim().length < 10) {
+                errors.push("Message must be at least 10 characters.");
+            }
+
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+            } else {
+                // Show success message
+                successMessage.style.display = "block";
+
+                // Clear the form
+                name.value = "";
+                email.value = "";
+                message.value = "";
+
+                // Hide again after 3 seconds (optional)
+                setTimeout(() => {
+                    successMessage.style.display = "none";
+                }, 3000);
+            }
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
